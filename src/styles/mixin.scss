@@ -1,0 +1,42 @@
+@charset "utf-8";
+//主色
+$themeColor: #5074ee;
+//辅色
+$viceColor: #999;
+
+@function rem($px){
+  @return $px/25 * 1rem;
+}
+
+// 背景图片地址和大小
+@mixin bis($url, $size: cover) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: $size;
+}
+
+// 头像
+@mixin ic($width, $height) {
+  display: block;
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+// 单行省略号
+@mixin toe() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 多行省略号
+@mixin bov($num: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;
+}

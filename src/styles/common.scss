@@ -1,0 +1,208 @@
+
+.page_center {
+  min-width: 1280px;
+  width: 1280px;
+  margin: 0 auto;
+}
+.min_width {
+  min-width: 1280px;
+}
+.bread_box {
+  padding: rem(24) rem(80);
+  display: flex;
+  align-items: center;
+  a {
+    font-size: rem(18);
+    color: #333333;
+    cursor: pointer;
+  }
+  div {
+    font-size: rem(18);
+	  color: #333333;
+  }
+  span {
+    padding: 0 rem(15);
+    font-size: rem(18);
+	  color: #333333;
+  }
+}
+.no_data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  span {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #999;
+  }
+}
+//弹出框
+.prompt {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: rem(10) rem(20);
+  border-radius: rem(5);
+  z-index: 5000;
+  color: #fff;
+  max-width: 85%;
+  text-align: center;
+  transition: all 0.6s;
+  font-size: rem(24);
+}
+
+//确认框/询问框
+.alertMask {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  .alertPopups {
+    width: rem(420);
+    background-color: #fff;
+    border: 1px solid #ebeef5;
+    font-size: rem(18);
+    box-shadow: 0 rem(2) rem(12) 0 rgba(0, 0, 0, 0.1);
+    border-radius: rem(4);
+    animation: alertAnimation 0.4s;
+
+    .title {
+      padding: rem(15);
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        font-size: rem(18);
+        color: #303133;
+      }
+
+      span {
+        width: rem(16);
+        height: rem(16);
+        cursor: pointer;
+        stroke: #909399;
+        fill: #909399;
+
+        &:hover {
+          stroke: #f00;
+          fill: #f00;
+        }
+      }
+    }
+
+    .alertContent {
+      padding: rem(10) rem(15);
+      color: #606266;
+      font-size: rem(14);
+      display: flex;
+      align-items: center;
+
+      &.inputType {
+        display: block;
+
+        input {
+          background-color: #fff;
+          background-image: none;
+          border-radius: rem(4);
+          border: 1px solid #dcdfe6;
+          box-sizing: border-box;
+          color: #606266;
+          display: inline-block;
+          font-size: inherit;
+          height: rem(40);
+          line-height: rem(40);
+          outline: none;
+          padding: 0 rem(15);
+          transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+          width: 100%;
+          margin: rem(15) 0;
+
+          &:focus {
+            outline: none;
+            border-color: #409eff;
+          }
+        }
+      }
+
+      svg {
+        stroke: #e6a23c;
+        fill: #e6a23c;
+        width: rem(24);
+        height: rem(24);
+        flex-shrink: 0;
+        margin-right: rem(10);
+      }
+
+      p {
+        color: #606266;
+        font-size: rem(14);
+      }
+    }
+
+    .alertBut {
+      padding: rem(5) rem(15) rem(10);
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        padding: rem(9) rem(15);
+        font-size: rem(12);
+        border-radius: rem(3);
+
+        &.alertCancel {
+          background: #fff;
+          border: 1px solid #dcdfe6;
+          color: #606266;
+
+          &:hover {
+            color: $themeColor;
+            opacity: 0.8;
+          }
+        }
+
+        &.alertConfirm {
+          background: $themeColor;
+          border: 1px solid $themeColor;
+          color: #fff;
+          margin-left: 10px;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+.vs--searchable .vs__dropdown-toggle {
+  width: rem(162);
+  height: rem(60);
+  background-color: #ffffff;
+  border-radius: rem(4);
+  border: solid rem(1) #e5e5e5;
+  font-size: rem(14);
+  color: #222222;
+  margin-right: rem(20);
+  margin-bottom: rem(24);
+  span {
+    height: rem(60);
+    line-height: rem(60);
+    margin: 0;
+    padding: 0 rem(10);
+  }
+}
+@font-face {
+    font-family: myfont;
+    src: url("~@/font/YouSheBiaoTiHei.ttf");
+  }
